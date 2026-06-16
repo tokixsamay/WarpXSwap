@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "paths": {
+      "@warpxswap/sdk": ["../sdk/src"]
+    }
+  },
+  "include": ["./**/*"],
+  "exclude": ["dist", "node_modules"]
+}
