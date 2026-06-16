@@ -1,0 +1,27 @@
+[package]
+name = "routing-program"
+version = "0.1.0"
+description = "WarpXSwap Routing Program"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "routing_program"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang       = "0.30.1"
+anchor-spl        = "0.30.1"
+pool-program      = { path = "../pool",      features = ["cpi"] }
+info-pool-program = { path = "../info_pool" }
+
+# Pin transitive deps to versions compatible with platform-tools Rust 1.75.0
+indexmap  = { workspace = true }
+ahash     = { workspace = true }
+hashbrown = { workspace = true }
