@@ -1,0 +1,16 @@
+{
+  "name": "warpxswap",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["sdk", "crank", "tests"],
+  "scripts": {
+    "build:sdk": "cd sdk && npm run build",
+    "build": "npm run build:sdk",
+    "test": "cd tests && npm test",
+    "crank:start": "cd crank && npm start",
+    "crank:dev": "cd crank && npm run dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
